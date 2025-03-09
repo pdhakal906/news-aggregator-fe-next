@@ -1,4 +1,4 @@
-import { NavLink, Stack, Text } from '@mantine/core'
+import { Stack, } from '@mantine/core'
 import Link from 'next/link'
 import React from 'react'
 

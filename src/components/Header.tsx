@@ -1,6 +1,4 @@
-import { Card, Group, Text } from '@mantine/core'
 import React from 'react'
-import CustomThemeSwitcher from './CustomThemeSwitcher'
 import Link from 'next/link'
 interface HeaderPropsType {
   title: string;
