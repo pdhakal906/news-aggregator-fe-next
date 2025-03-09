@@ -4,11 +4,11 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'img.setoparty.com',
-        port: '',
-        pathname: '/uploads/posts/**',
-        search: '',
+        protocol: "https",
+        hostname: "img.setoparty.com",
+        port: "",
+        pathname: "/uploads/posts/**",
+        search: "",
       },
       {
         protocol: "https",
@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "assets-cdn.ekantipur.com",
+      },
+      {
+        protocol: "https",
+        hostname: "www.setopati.com",
       },
     ],
   },

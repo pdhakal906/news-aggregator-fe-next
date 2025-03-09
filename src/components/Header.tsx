@@ -2,33 +2,18 @@ import { Card, Group, Text } from '@mantine/core'
 import React from 'react'
 import CustomThemeSwitcher from './CustomThemeSwitcher'
 import Link from 'next/link'
+interface HeaderPropsType {
+  title: string;
+}
 
-
-const Header = () => {
+const Header = (props: HeaderPropsType) => {
+  const { title } = props;
   return (
-    <header>
-      <Card p={"10"}
-        shadow='lg'
-        h={"60"}>
-        <Group justify='space-between'>
-          <Link href="/" passHref
-            style={{ cursor: 'pointer', textDecoration: 'none' }}
-          >
-            <Text
-              ml={20}
-              size="2rem"
-              fw={900}
-              variant="gradient"
-              gradient={{ from: 'blue', to: 'violet', deg: 180 }}
-
-            >
-              NEWS HUB
-            </Text>
-          </Link>
-          <CustomThemeSwitcher />
-        </Group>
-      </Card>
-    </header>
+    <>
+      <Link href="/" passHref className='text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent'>
+        {title}
+      </Link>
+    </>
   )
 }
 

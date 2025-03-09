@@ -1,8 +1,8 @@
 'use server';
-import NewsPage from "./newsPage";
+import NewsData from "@/components/NewsData";
 
 
-export default async function Home({
+export default async function NewsPage({
   searchParams,
 }: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
@@ -12,8 +12,7 @@ export default async function Home({
 
   return (
     <>
-
-      <NewsPage searchParams={searchParams}></NewsPage>
+      <NewsData page={page} />
     </>
   );
 }

@@ -5,6 +5,9 @@ import '@mantine/core/styles.css';
 
 
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
+import Sidebar from "@/components/Sidebar";
+import AppLayout from "./appLayout";
+import "./globals.css";
 
 export const metadata = {
   title: 'News Aggregator',
@@ -22,8 +25,11 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body>
+
         <MantineProvider>
-          {children}
+          <AppLayout>
+            {children}
+          </AppLayout>
           <Analytics />
         </MantineProvider>
       </body>
