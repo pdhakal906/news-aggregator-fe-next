@@ -9,11 +9,12 @@ export default async function Home({
 }) {
   // const { page = '1', sort = 'asc', query = '' } = await searchParams
   const { page = '1' } = await searchParams
+  console.log(page)
 
   return (
     <>
 
-      <NewsPage searchParams={searchParams}></NewsPage>
+      <NewsPage searchParams={searchParams} ></NewsPage>
     </>
   );
 }
