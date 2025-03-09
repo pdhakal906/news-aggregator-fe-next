@@ -4,7 +4,7 @@ import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import { AppShell, Burger, Group, Paper } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import React, { useState } from 'react'
+import React from 'react'
 
 interface AppLayoutPropsType {
   children: React.ReactNode;

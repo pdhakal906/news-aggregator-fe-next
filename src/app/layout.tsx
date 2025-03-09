@@ -5,7 +5,6 @@ import '@mantine/core/styles.css';
 
 
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
-import Sidebar from "@/components/Sidebar";
 import AppLayout from "./appLayout";
 import "./globals.css";
 
