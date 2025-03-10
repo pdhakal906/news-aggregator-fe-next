@@ -20,7 +20,7 @@ const AppLayout = (props: AppLayoutPropsType) => {
         // layout='alt'
         header={{ height: 60 }}
         navbar={{
-          width: 300,
+          width: 100,
           breakpoint: 'sm',
           collapsed: { mobile: !opened, desktop: !opened }
         }}
