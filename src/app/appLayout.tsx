@@ -2,7 +2,7 @@
 import CustomThemeSwitcher from '@/components/CustomThemeSwitcher';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import { AppShell, Burger, Group, Paper } from '@mantine/core';
+import { AppShell, Box, Burger, Group, Paper } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import React from 'react'
 
@@ -13,45 +13,57 @@ interface AppLayoutPropsType {
 const AppLayout = (props: AppLayoutPropsType) => {
   const { children } = props;
   const [opened, { toggle }] = useDisclosure();
-  // const [navOpen, setNavOpen] = useState(false)
+
+
+  const toggleNavbar = () => {
+    toggle(); // This will toggle the opened state
+  };
   return (
     <>
       <AppShell
         // layout='alt'
-        header={{ height: 60 }}
+        header={{ height: 50 }}
         navbar={{
-          width: 100,
+          width: { base: 100 },
           breakpoint: 'sm',
           collapsed: { mobile: !opened, desktop: !opened }
         }}
-        padding="md"
       >
         <Paper>
-          <AppShell.Header withBorder={false}
-            className='border-green-200 border-b-[3px]'
-          >
-            <Group
-              justify='space-between'
-              align='center'
+          <Box>
+            <Box>
+              <AppShell.Header
+                zIndex={300}
+                withBorder={false}
+                className='border-green-200 border-b-[3px]'
+              >
+                <Group
+                  justify='space-between'
+                  align='center'
 
-            >
-              <Group >
-                <Burger opened={opened} onClick={toggle} p={5} mt={4} size="30px" />
-                <Header title='NewsHub'></Header>
-              </Group>
-              <CustomThemeSwitcher />
-            </Group>
+                >
+                  <Group >
+                    <Burger opened={opened} onClick={toggle} p={5} mt={4} size="30px" />
+                    <Header title='NewsHub'></Header>
+                  </Group>
+                  <CustomThemeSwitcher />
+                </Group>
 
-          </AppShell.Header>
-          <AppShell.Navbar p="md"
-            withBorder={true}
-            className='border-green-300 border-r-[3px]'
-          >
-            <Sidebar></Sidebar>
-          </AppShell.Navbar>
-          <AppShell.Main>
-            {children}
-          </AppShell.Main>
+              </AppShell.Header>
+              <AppShell.Navbar
+                // p="md"
+                zIndex={300}
+                className='border-none'
+              >
+                <Sidebar toggleNavbar={toggleNavbar} />
+              </AppShell.Navbar>
+            </Box>
+            <Box>
+              <AppShell.Main>
+                {children}
+              </AppShell.Main>
+            </Box>
+          </Box>
         </Paper>
       </AppShell>
 

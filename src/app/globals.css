@@ -4,3 +4,23 @@
 
 
 
+.responsive-text {
+  position: absolute;
+  top: 40%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .responsive-text {
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 90%;
+    max-width: 400px;
+  }
+  .name-text {
+    margin-left: -70 !important;
+  }
+}
