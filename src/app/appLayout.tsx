@@ -54,7 +54,7 @@ const AppLayout = (props: AppLayoutPropsType) => {
                 zIndex={300}
                 className='border-none'
               >
-                <Sidebar toggleNavbar={toggleNavbar} />
+                <Sidebar />
               </AppShell.Navbar>
             </Box>
             <Box p={0}>
