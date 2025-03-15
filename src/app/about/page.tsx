@@ -30,7 +30,7 @@ const AboutPage = () => {
             style={{
               fontSize: "2.5rem",
               fontWeight: "bold",
-              color: "yellow",
+              color: "white",
               textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
             }}
           >PRATIK DHAKAL</Text>
@@ -39,7 +39,7 @@ const AboutPage = () => {
               <IconBracketsAngle
                 size={25}
                 style={{
-                  color: "yellow",
+                  color: "white",
                   filter:
                     "drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black)",
                 }}
@@ -49,7 +49,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "18px",
                   fontWeight: "bold",
-                  color: "yellow",
+                  color: "white",
                   textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
                 }}
               >Fullstack Developer</Text>
@@ -59,7 +59,7 @@ const AboutPage = () => {
 
                 size={25}
                 style={{
-                  color: "yellow",
+                  color: "white",
                   filter:
                     "drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black)",
                 }}
@@ -69,7 +69,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "18px",
                   fontWeight: "bold",
-                  color: "yellow",
+                  color: "white",
                   textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
                 }}
               >pdhakal906@gmail.com</Text>
@@ -78,7 +78,7 @@ const AboutPage = () => {
               <IconPhone
                 size={25}
                 style={{
-                  color: "yellow",
+                  color: "white",
                   filter:
                     "drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black)",
                 }}
@@ -88,7 +88,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "18px",
                   fontWeight: "bold",
-                  color: "yellow",
+                  color: "white",
                   textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
                 }}
               >+9779861996461</Text>
@@ -97,7 +97,7 @@ const AboutPage = () => {
               <IconHome
                 size={25}
                 style={{
-                  color: "yellow",
+                  color: "white",
                   filter:
                     "drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black)",
                 }}
@@ -107,7 +107,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "18px",
                   fontWeight: "bold",
-                  color: "yellow",
+                  color: "white",
                   textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
                 }}
               >Kathmandu, Nepal</Text>
@@ -116,7 +116,7 @@ const AboutPage = () => {
               <IconBrandGit
                 size={25}
                 style={{
-                  color: "yellow",
+                  color: "white",
                   filter:
                     "drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black)",
                 }}
@@ -126,7 +126,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "18px",
                   fontWeight: "bold",
-                  color: "yellow",
+                  color: "white",
                   textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
                 }}
                 target='_blank'>GitHub</Link>
@@ -135,7 +135,7 @@ const AboutPage = () => {
               <IconBrandLinkedin
                 size={25}
                 style={{
-                  color: "yellow",
+                  color: "white",
                   filter:
                     "drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black)",
                 }}
@@ -146,7 +146,7 @@ const AboutPage = () => {
                 style={{
                   fontSize: "18px",
                   fontWeight: "bold",
-                  color: "yellow",
+                  color: "white",
                   textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
                 }}
                 target='_blank'>LinkedIn</Link>
