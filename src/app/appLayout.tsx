@@ -15,9 +15,9 @@ const AppLayout = (props: AppLayoutPropsType) => {
   const [opened, { toggle }] = useDisclosure();
 
 
-  const toggleNavbar = () => {
-    toggle(); // This will toggle the opened state
-  };
+  // const toggleNavbar = () => {
+  //   toggle(); // This will toggle the opened state
+  // };
   return (
     <>
       <AppShell
