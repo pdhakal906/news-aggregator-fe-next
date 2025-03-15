@@ -4,7 +4,8 @@ import { IconBracketsAngle, IconBrandGit, IconBrandLinkedin, IconHome, IconMail,
 
 const AboutPage = () => {
   return (
-    <Paper>
+    <Paper
+    >
       {/* Background Image Container */}
       <BackgroundImage src="/graffati.jpg" radius="sm"
         h={"100vh"}

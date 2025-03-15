@@ -35,7 +35,6 @@ const AppLayout = (props: AppLayoutPropsType) => {
               <AppShell.Header
                 zIndex={300}
                 withBorder={false}
-                className='border-green-200 border-b-[3px]'
               >
                 <Group
                   justify='space-between'
@@ -58,7 +57,7 @@ const AppLayout = (props: AppLayoutPropsType) => {
                 <Sidebar toggleNavbar={toggleNavbar} />
               </AppShell.Navbar>
             </Box>
-            <Box>
+            <Box p={0}>
               <AppShell.Main>
                 {children}
               </AppShell.Main>

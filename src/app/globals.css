@@ -13,6 +13,20 @@
   text-align: center;
 }
 
+
+@media (max-width: 1024px) {
+  .responsive-text {
+    left: 25%;
+    transform: translate(-50%, -40%);
+    width: 90%;
+    max-width: 400px;
+  }
+  .name-text {
+    margin-left: -70 !important;
+  }
+}
+
+
 @media (max-width: 768px) {
   .responsive-text {
     left: 50%;
