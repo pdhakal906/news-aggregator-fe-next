@@ -2,7 +2,7 @@
 import CustomThemeSwitcher from '@/components/CustomThemeSwitcher';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
-import { AppShell, Box, Burger, Group, Paper } from '@mantine/core';
+import { AppShell, Box, Burger, Group, Paper, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import React from 'react'
 
@@ -13,6 +13,9 @@ interface AppLayoutPropsType {
 const AppLayout = (props: AppLayoutPropsType) => {
   const { children } = props;
   const [opened, { toggle }] = useDisclosure();
+
+  const theme = useMantineTheme();
+  const { colorScheme } = useMantineColorScheme();
 
 
   // const toggleNavbar = () => {
@@ -29,7 +32,15 @@ const AppLayout = (props: AppLayoutPropsType) => {
           collapsed: { mobile: !opened, desktop: !opened }
         }}
       >
-        <Paper>
+        <Paper
+          styles={{
+            root: {
+              backgroundColor: (colorScheme === 'dark' || colorScheme === 'auto')
+                ? theme.colors.dark[5]
+                : theme.colors.gray[0]
+            },
+          }}
+        >
           <Box>
             <Box>
               <AppShell.Header
@@ -57,9 +68,11 @@ const AppLayout = (props: AppLayoutPropsType) => {
                 <Sidebar />
               </AppShell.Navbar>
             </Box>
-            <Box p={0}>
+            <Box p={10}>
               <AppShell.Main>
+
                 {children}
+
               </AppShell.Main>
             </Box>
           </Box>

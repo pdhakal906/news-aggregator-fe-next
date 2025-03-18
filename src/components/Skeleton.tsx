@@ -5,7 +5,7 @@ const NewsSkeleton = () => {
     <SimpleGrid
       p={0}
       cols={{ base: 1, sm: 2, lg: 4 }}
-      spacing={{ base: 10, sm: 'xl' }}
+      spacing={{ base: 20, sm: 'xl' }}
       verticalSpacing={{ base: 'md', sm: 'xl' }}
     >
       {[...Array(12)].map((_, index) => (
