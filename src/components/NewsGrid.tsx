@@ -7,6 +7,7 @@ const NewsGrid = (props: NewsPropType) => {
   const { newsItem } = props
   return (
     <Stack
+      p={10}
       gap={20}>
       <SimpleGrid
         cols={{ base: 1, sm: 2, lg: 4 }}

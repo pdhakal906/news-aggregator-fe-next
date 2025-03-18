@@ -3,7 +3,7 @@ const NewsSkeleton = () => {
 
   return (
     <SimpleGrid
-      p={0}
+      p={10}
       cols={{ base: 1, sm: 2, lg: 4 }}
       spacing={{ base: 20, sm: 'xl' }}
       verticalSpacing={{ base: 'md', sm: 'xl' }}

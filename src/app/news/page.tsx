@@ -1,7 +1,6 @@
 'use server';
 import NewsData from "@/components/NewsData";
 
-
 export default async function NewsPage({
   searchParams,
 }: {

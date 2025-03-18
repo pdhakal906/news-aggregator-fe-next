@@ -14,6 +14,8 @@
 }
 
 
+
+
 @media (max-width: 1024px) {
   .responsive-text {
     left: 25%;
@@ -37,4 +39,14 @@
   .name-text {
     margin-left: -70 !important;
   }
+  
+  .responsive-sidebar {
+    margin-left: 10px;
+  }
+
+  .responsive-burger {
+  margin-left: 10px;
+  }
 }
+
+

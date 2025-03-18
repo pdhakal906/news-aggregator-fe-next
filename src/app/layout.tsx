@@ -9,8 +9,8 @@ import AppLayout from "./appLayout";
 import "./globals.css";
 
 export const metadata = {
-  title: 'News Aggregator',
-  description: 'News Aggregator',
+  title: "Pratik Dhakal | Full-Stack Developer",
+  description: "Web Developer from Nepal specializing in JavaScript and Python"
 };
 
 export default function RootLayout({

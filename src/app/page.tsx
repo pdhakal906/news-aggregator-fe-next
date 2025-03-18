@@ -1,20 +1,10 @@
-'use server';
-import NewsPage from "./newsPage";
+import Hero from "@/components/Hero";
 
-
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}) {
-  // const { page = '1', sort = 'asc', query = '' } = await searchParams
-  const { page = '1' } = await searchParams
-  console.log(page)
-
+export default async function Home() {
   return (
     <>
-
-      <NewsPage searchParams={searchParams} ></NewsPage>
+      <Hero></Hero>
     </>
   );
+
 }

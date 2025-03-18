@@ -1,10 +1,9 @@
 'use client';
 import CustomThemeSwitcher from '@/components/CustomThemeSwitcher';
-import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import { AppShell, Box, Burger, Group, Paper, useMantineColorScheme, useMantineTheme } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 interface AppLayoutPropsType {
   children: React.ReactNode;
@@ -17,10 +16,21 @@ const AppLayout = (props: AppLayoutPropsType) => {
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
 
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+
 
   // const toggleNavbar = () => {
   //   toggle(); // This will toggle the opened state
   // };
+
+  if (!mounted) return null; // Avoid rendering mismatched styles during hydration
+
+
   return (
     <>
       <AppShell
@@ -53,8 +63,8 @@ const AppLayout = (props: AppLayoutPropsType) => {
 
                 >
                   <Group >
-                    <Burger opened={opened} onClick={toggle} p={5} mt={4} size="30px" />
-                    <Header title='NewsHub'></Header>
+                    <Burger className='responsive-burger' opened={opened} onClick={toggle} p={5} mt={4} size="30px" />
+                    {/* <Header title='NewsHub'></Header> */}
                   </Group>
                   <CustomThemeSwitcher />
                 </Group>
@@ -68,7 +78,7 @@ const AppLayout = (props: AppLayoutPropsType) => {
                 <Sidebar />
               </AppShell.Navbar>
             </Box>
-            <Box p={10}>
+            <Box>
               <AppShell.Main>
 
                 {children}

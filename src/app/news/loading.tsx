@@ -1,10 +1,11 @@
-import HeroSkeleton from '@/components/HeroSkeleton'
+import NewsSkeleton from '@/components/Skeleton';
 import React from 'react'
 
 const loading = () => {
   return (
-    <HeroSkeleton />
-  )
+    <NewsSkeleton />
+  );
+
 }
 
 export default loading

@@ -19,13 +19,14 @@ const Sidebar = () => {
     <>
       <Stack
         // p={10}
+        className='responsive-sidebar'
         gap={10} >
         <Link
           href="/"
           style={{
             background: `${isActive('/') ? 'oklch(0.645 0.246 16.439)' : ''}`,
             paddingLeft: '4px',
-            fontSize: "18px",
+            fontSize: "24px",
             fontWeight: "bold",
             color: "white",
             textShadow: "1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black"
@@ -36,17 +37,17 @@ const Sidebar = () => {
         <Link
 
           style={{
-            background: `${isActive('/about') ? 'oklch(0.645 0.246 16.439)' : ''}`,
+            background: `${isActive('/news') ? 'oklch(0.645 0.246 16.439)' : ''}`,
             paddingLeft: '5px',
-            fontSize: "18px",
+            fontSize: "24px",
             fontWeight: "bold",
             color: "white",
             textShadow: "1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black"
           }}
-          href="/about"
+          href="/news"
 
         >
-          About
+          News
         </Link>
       </Stack>
     </>
