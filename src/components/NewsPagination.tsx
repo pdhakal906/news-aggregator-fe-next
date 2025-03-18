@@ -14,7 +14,7 @@ export function NewsPagination(props: NewsPaginationPropType) {
 
 
   const handlePageChange = (newPage: number) => {
-    router.push(`/?page=${newPage}`);
+    router.push(`/news?page=${newPage}`);
   };
 
   return (
