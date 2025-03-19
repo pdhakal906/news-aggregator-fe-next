@@ -37,6 +37,21 @@ const Sidebar = () => {
         <Link
 
           style={{
+            background: `${isActive('/projects') ? 'oklch(0.645 0.246 16.439)' : ''}`,
+            paddingLeft: '5px',
+            fontSize: "24px",
+            fontWeight: "bold",
+            color: "white",
+            textShadow: "1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black"
+          }}
+          href="/projects"
+
+        >
+          Projects
+        </Link>
+        <Link
+
+          style={{
             background: `${isActive('/news') ? 'oklch(0.645 0.246 16.439)' : ''}`,
             paddingLeft: '5px',
             fontSize: "24px",
