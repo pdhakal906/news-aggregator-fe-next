@@ -31,7 +31,8 @@ export default async function CalendarPage({ params }) {
         ))}
       </div>
     );
-  } catch (_) {
+  } catch (error) {
+    console.log(error);
     return (
       <>
         <div className="flex justify-center items-center h-screen">
