@@ -1,6 +1,26 @@
 import React from "react";
 
-async function getCalendarData(year) {
+interface Day {
+  day: number;
+  weekday_name: string;
+}
+
+interface Month {
+  month: number;
+  name: string;
+  days: Day[];
+}
+
+interface CalendarData {
+  year: number;
+  months: Month[];
+}
+
+interface CalendarPageProps {
+  params: { year: string };
+}
+
+async function getCalendarData(year: string): Promise<CalendarData> {
   const res = await fetch(`http://127.0.0.1:8000/api/calender/${year}`);
   if (!res.ok) {
     throw new Error("Failed to fetch calendar data");
@@ -8,8 +28,8 @@ async function getCalendarData(year) {
   return res.json();
 }
 
-export default async function CalendarPage({ params }) {
-  const { year } = await params;
+export default async function CalendarPage({ params }: CalendarPageProps) {
+  const { year } = params;
 
   try {
     const calendarData = await getCalendarData(year);
@@ -32,13 +52,11 @@ export default async function CalendarPage({ params }) {
       </div>
     );
   } catch (error) {
-    console.log(error);
+    console.error(error);
     return (
-      <>
-        <div className="flex justify-center items-center h-screen">
-          <p className="text-3xl font-bold">Page Under Construction</p>;
-        </div>
-      </>
+      <div className="flex justify-center items-center h-screen">
+        <p className="text-3xl font-bold">Page Under Construction</p>
+      </div>
     );
   }
 }
