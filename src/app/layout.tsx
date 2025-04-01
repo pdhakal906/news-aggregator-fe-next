@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
+        <link rel="icon" href="/icon.png" sizes="any" />
         <ColorSchemeScript />
       </head>
       <body>
