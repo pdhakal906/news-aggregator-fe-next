@@ -6,9 +6,9 @@ import React from 'react'
 const ProjectCard = () => {
 
   const projects = [
+    { "name": "News Aggregator", "description": "Scraper Service Scrapes News from Various News Portals and Stores Them in Database. API Service Brodcasts the Stored Data Which is Then Displayed In a Web Page.", "image": "/project3.png", "github": "https://github.com/pdhakal906/news_aggregator", "live_link": "https://www.pratikdhakal906.com.np/news", "tech_stack": ["Scrapy", "Django", "Django Rest Framework", "Next.js", "Mantine UI"] },
     { "name": "Record Management Lite", "description": "Minmalistic Record Keeper With Search Functionality, Built Using HTML, Bootstrap and Vanilla Javascript. Uses Local Storage to Store Data.", "image": "/project2.png", "github": "https://github.com/pdhakal906/CRUD-js", "live_link": "https://crud-with-search-feature.vercel.app/", "tech_stack": ["Vanilla Javascript", "HTML", "Bootstrap"] },
     { "name": "Movie Site", "description": "Uses API From TMDB to Display Various Movies and TV Shows. Has Search and Pagniation Functionality.", "image": "/project1.png", "github": "https://github.com/pdhakal906/react-movie-front", "live_link": "https://react-movie-front.vercel.app/", "tech_stack": ["React.js", "Material Tailwind", "Redux", "Axios", "Formik"] },
-    { "name": "News Aggregator", "description": "Scraper Service Scrapes News from Various News Portals and Stores Them in Database. API Service Brodcasts the Stored Data Which is Then Displayed In a Web Page.", "image": "/project3.png", "github": "https://github.com/pdhakal906/news_aggregator", "live_link": "https://www.pratikdhakal906.com.np/news", "tech_stack": ["Scrapy", "Django", "Django Rest Framework", "Next.js", "Mantine UI"] },
   ]
 
   return (
