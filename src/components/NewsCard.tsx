@@ -1,6 +1,5 @@
 'use client';
-import { Card, Text, Stack, Group, Box } from '@mantine/core';
-import { IconArrowUp, IconArrowDown } from '@tabler/icons-react';
+import { Card, Text, Group, Box } from '@mantine/core';
 import React from 'react';
 import { NewsItemType } from './types';
 

@@ -1,6 +1,6 @@
 'use client';
 import NewsCard from './NewsCard'
-import { SimpleGrid, Stack } from '@mantine/core';
+import { Stack } from '@mantine/core';
 import { NewsPropType } from './types';
 
 const NewsGrid = ({ newsItem }: NewsPropType) => {
