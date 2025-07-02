@@ -10,8 +10,8 @@ export default async function NewsPage({
   const { page = '1' } = await searchParams
 
   return (
-    <>
+    <div className="p-10">
       <NewsData page={page} />
-    </>
+    </div>
   );
 }
