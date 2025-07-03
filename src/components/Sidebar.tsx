@@ -2,14 +2,23 @@
 import { usePathname } from 'next/navigation'
 import { Stack, } from '@mantine/core'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 
-// interface SidebarProps {
-//   toggleNavbar: () => void; // Add a prop to accept the function
-// }
+interface SidebarProps {
+  toggleNavbar: () => void;
+}
 
-const Sidebar = () => {
+
+const Sidebar = ({ toggleNavbar }: SidebarProps) => {
   const pathname = usePathname()
+
+
+  useEffect(() => {
+    // Close sidebar on route change
+    toggleNavbar();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
+
 
   const isActive = (path: string) => {
     return pathname === path;

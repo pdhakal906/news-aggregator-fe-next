@@ -20,6 +20,7 @@ export function NewsPagination(props: NewsPaginationPropType) {
   return (
     <Center>
       <Pagination
+        size={'lg'}
         value={currentPage}
         mb={20}
         onChange={handlePageChange}

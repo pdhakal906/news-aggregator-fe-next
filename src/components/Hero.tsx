@@ -1,5 +1,5 @@
 import { BackgroundImage, Group, Overlay, Stack, Text } from '@mantine/core'
-import { IconBracketsAngle, IconBrandGit, IconBrandLinkedin, IconHome, IconMail, IconPhone } from '@tabler/icons-react'
+import { IconBracketsAngle, IconBrandGit, IconBrandLinkedin, IconBriefcaseFilled, IconHome, IconMail, IconPhone } from '@tabler/icons-react'
 import Link from 'next/link'
 import React from 'react'
 
@@ -112,6 +112,25 @@ const Hero = () => {
                   textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
                 }}
               >Kathmandu, Nepal</Text>
+            </Group>
+            <Group gap={5} align='center'>
+              <IconBriefcaseFilled
+                size={25}
+                style={{
+                  color: "white",
+                  filter:
+                    "drop-shadow(2px 2px 0 black) drop-shadow(-2px -2px 0 black) drop-shadow(2px -2px 0 black) drop-shadow(-2px 2px 0 black)",
+                }}
+                stroke={2}
+              ></IconBriefcaseFilled>
+              <Link style={{
+                fontSize: "18px",
+                fontWeight: "bold",
+                color: "white",
+                textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
+              }} href="https://cloco.com.np/" target="_blank">
+
+                Cloco Nepal Inc.</Link>
             </Group>
             <Group gap={5} align='center'>
               <IconBrandGit

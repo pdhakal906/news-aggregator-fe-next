@@ -11,7 +11,7 @@ interface AppLayoutPropsType {
 
 const AppLayout = (props: AppLayoutPropsType) => {
   const { children } = props;
-  const [opened, { toggle }] = useDisclosure();
+  const [opened, { toggle }] = useDisclosure(true); // Initial state is closed
 
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
@@ -23,12 +23,7 @@ const AppLayout = (props: AppLayoutPropsType) => {
   }, []);
 
 
-
-  // const toggleNavbar = () => {
-  //   toggle(); // This will toggle the opened state
-  // };
-
-  if (!mounted) return null; // Avoid rendering mismatched styles during hydration
+  if (!mounted) return null;
 
 
   return (
@@ -75,7 +70,7 @@ const AppLayout = (props: AppLayoutPropsType) => {
                 zIndex={300}
                 className='border-none'
               >
-                <Sidebar />
+                <Sidebar toggleNavbar={toggle} />
               </AppShell.Navbar>
             </Box>
             <Box>

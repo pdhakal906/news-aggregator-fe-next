@@ -9,7 +9,7 @@ import AppLayout from "./appLayout";
 import "./globals.css";
 
 export const metadata = {
-  title: "Pratik Dhakal | Full-Stack Developer",
+  title: "Pratik Dhakal | Full-Stack Developer | Nepal",
   description: "Web Developer from Nepal specializing in JavaScript and Python"
 };
 
