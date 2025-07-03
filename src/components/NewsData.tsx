@@ -14,6 +14,7 @@ async function fetchNews(page = 1) {
     const posts = await res.json();
     return { "news": posts?.results, "total": Math.ceil(posts?.count / 24) };
   } catch (error) {
+    console.error(error)
     return { "news": [], "total": 0 };
   }
 }
