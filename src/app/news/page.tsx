@@ -12,6 +12,6 @@ export default async function NewsPage({
   return (
     <div className="p-5">
       <NewsData page={page} />
-    </div>
+    </div >
   );
 }
