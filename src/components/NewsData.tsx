@@ -7,10 +7,7 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 async function fetchNews(page = 1) {
 
   try {
-    const res = await fetch(`${API_URL}?page=${page}`, {
-      cache: 'force-cache',
-      next: { revalidate: 3600 },
-    });
+    const res = await fetch(`${API_URL}?page=${page}`);
     const posts = await res.json();
     return { "news": posts?.results, "total": Math.ceil(posts?.count / 24) };
   } catch (error) {
