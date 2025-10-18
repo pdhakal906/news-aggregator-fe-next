@@ -1,9 +1,14 @@
-'use client';
-import CustomThemeSwitcher from '@/components/CustomThemeSwitcher';
-import Sidebar from '@/components/Sidebar';
-import { AppShell, Box, Burger, Group, Paper, useMantineColorScheme, useMantineTheme } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
-import React, { useEffect, useState } from 'react'
+"use client";
+import ChatComponent from "@/components/Chat";
+import CustomThemeSwitcher from "@/components/CustomThemeSwitcher";
+import {
+  Box,
+  Paper,
+  useMantineColorScheme,
+  useMantineTheme,
+} from "@mantine/core";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 interface AppLayoutPropsType {
   children: React.ReactNode;
@@ -11,7 +16,6 @@ interface AppLayoutPropsType {
 
 const AppLayout = (props: AppLayoutPropsType) => {
   const { children } = props;
-  const [opened, { toggle }] = useDisclosure(true); // Initial state is closed
 
   const theme = useMantineTheme();
   const { colorScheme } = useMantineColorScheme();
@@ -22,72 +26,42 @@ const AppLayout = (props: AppLayoutPropsType) => {
     setMounted(true);
   }, []);
 
-
   if (!mounted) return null;
-
 
   return (
     <>
-      <AppShell
-        // layout='alt'
-        header={{ height: 50 }}
-        navbar={{
-          width: { base: 100 },
-          breakpoint: 'sm',
-          collapsed: { mobile: !opened, desktop: !opened }
+      <Paper
+        styles={{
+          root: {
+            backgroundColor:
+              colorScheme === "dark" || colorScheme === "auto"
+                ? theme.colors.dark[5]
+                : theme.colors.gray[0],
+          },
         }}
       >
-        <Paper
-          styles={{
-            root: {
-              backgroundColor: (colorScheme === 'dark' || colorScheme === 'auto')
-                ? theme.colors.dark[5]
-                : theme.colors.gray[0]
-            },
-          }}
-        >
-          <Box>
-            <Box>
-              <AppShell.Header
-                zIndex={300}
-                withBorder={false}
-              >
-                <Group
-                  justify='space-between'
-                  align='center'
-
-                >
-                  <Group >
-                    <Burger className='responsive-burger' opened={opened} onClick={toggle} p={5} mt={4} size="30px" />
-                    {/* <Header title='NewsHub'></Header> */}
-                  </Group>
-                  <CustomThemeSwitcher />
-                </Group>
-
-              </AppShell.Header>
-              <AppShell.Navbar
-                // p="md"
-                zIndex={300}
-                className='border-none'
-              >
-                <Sidebar toggleNavbar={toggle} />
-              </AppShell.Navbar>
-            </Box>
-            <Box>
-              <AppShell.Main>
-
-                {children}
-
-              </AppShell.Main>
-            </Box>
-          </Box>
-        </Paper>
-      </AppShell>
-
+        <div className="justify-self-end ">
+          <div className="flex gap-5 items-center">
+            <Link href="/" scroll={true}>
+              Home
+            </Link>{" "}
+            <Link href="#about" scroll={true}>
+              About
+            </Link>
+            <Link href="#projects" scroll={true}>
+              Projects
+            </Link>{" "}
+            <Link href="/news">News</Link>
+            <CustomThemeSwitcher />
+          </div>
+        </div>
+        <Box>
+          {children}
+          <ChatComponent />
+        </Box>
+      </Paper>
     </>
+  );
+};
 
-
-  )
-}
-
-export default AppLayout
+export default AppLayout;

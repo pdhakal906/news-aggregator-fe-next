@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 .responsive-text {
   position: absolute;
@@ -12,9 +14,6 @@
   z-index: 2;
   text-align: center;
 }
-
-
-
 
 @media (max-width: 1024px) {
   .responsive-text {
@@ -28,7 +27,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .responsive-text {
     left: 50%;
@@ -39,14 +37,12 @@
   .name-text {
     margin-left: -70 !important;
   }
-  
+
   .responsive-sidebar {
     margin-left: 10px;
   }
 
   .responsive-burger {
-  margin-left: 10px;
+    margin-left: 10px;
   }
 }
-
-
