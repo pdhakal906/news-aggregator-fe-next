@@ -1,4 +1,5 @@
-import { Paper, Text, useMantineTheme } from "@mantine/core";
+import { Paper, Text, } from "@mantine/core";
+import { IconChevronRight } from "@tabler/icons-react";
 
 export default function ExperienceTimeline() {
   return (
@@ -7,7 +8,6 @@ export default function ExperienceTimeline() {
       className="max-w-5xl mx-auto shadow-lg"
       p="xl"
       radius="md"
-      // 👇 use Mantine CSS variables — these update automatically in dark mode
       style={{
         backgroundColor: "var(--mantine-color-body)",
         color: "var(--mantine-color-text)",
@@ -25,7 +25,7 @@ export default function ExperienceTimeline() {
             </div>
 
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Hello, I'm
+              Hello, I&apos;m
               <br />
               Pratik Dhakal
             </h1>
@@ -66,28 +66,37 @@ export default function ExperienceTimeline() {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">Fullstack Developer</h3>
-                <p className="text-neutral-500 italic mb-4">
-                  Inspiring Lab, Nepal
-                </p>
-                <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
-                  <li>
-                    Built RESTful APIs using Django, Django REST Framework and
-                    FastAPI.
-                  </li>
-                  <li>Developed interactive UIs with React.js and Next.js.</li>
-                  <li>
-                    Built scalable web crawlers using Scrapy and Selenium.
-                  </li>
-                  <li>
-                    Performed data analysis and visualizations with Pandas,
-                    Matplotlib and Streamlit.
-                  </li>
-                  <li>
-                    Mentored interns on data collection, analysis and
-                    presentation.
-                  </li>
-                </ul>
+                <details className="group">
+                  <summary className="list-none cursor-pointer">
+                    <h3 className="text-xl font-bold mb-2">Fullstack Developer</h3>
+                    <p className="text-neutral-500 italic ">
+                      Inspiring Lab, Nepal
+                    </p>
+                    <div className="text-neutral-500 select-none ">
+                      <IconChevronRight className="transition-transform duration-300 group-open:rotate-90">
+                      </IconChevronRight>
+                    </div>
+
+                  </summary>
+                  <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
+                    <li>
+                      Built RESTful APIs using Django, Django REST Framework and
+                      FastAPI.
+                    </li>
+                    <li>Developed interactive UIs with React.js and Next.js.</li>
+                    <li>
+                      Built scalable web crawlers using Scrapy and Selenium.
+                    </li>
+                    <li>
+                      Performed data analysis and visualizations with Pandas,
+                      Matplotlib and Streamlit.
+                    </li>
+                    <li>
+                      Mentored interns on data collection, analysis and
+                      presentation.
+                    </li>
+                  </ul>
+                </details>
               </div>
             </div>
 
@@ -100,17 +109,26 @@ export default function ExperienceTimeline() {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">
-                  Independent Contractor
-                </h3>
-                <p className="text-neutral-500 italic mb-4">Appen, Australia</p>
-                <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
-                  <li>
-                    Transcribed audio clips to train natural language processing
-                    models.
-                  </li>
-                  <li>Performed quality assurance on labeled data.</li>
-                </ul>
+                <details className="group">
+                  <summary className="list-none cursor-pointer">
+                    <h3 className="text-xl font-bold mb-2">
+                      Independent Contractor
+                    </h3>
+                    <p className="text-neutral-500 italic ">Appen, Australia</p>
+                    <div className="text-neutral-500 select-none ">
+                      <IconChevronRight className="transition-transform duration-300 group-open:rotate-90">
+                      </IconChevronRight>
+                    </div>
+
+                  </summary>
+                  <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
+                    <li>
+                      Transcribed audio clips to train natural language processing
+                      models.
+                    </li>
+                    <li>Performed quality assurance on labeled data.</li>
+                  </ul>
+                </details>
               </div>
             </div>
 
@@ -123,16 +141,24 @@ export default function ExperienceTimeline() {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">Cloudworker</h3>
-                <p className="text-neutral-500 italic mb-4">
-                  Cloudfactory, Nepal
-                </p>
-                <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
-                  <li>
-                    Annotated and tagged images to train computer vision models.
-                  </li>
-                  <li>Carried out quality assurance tasks.</li>
-                </ul>
+                <details className="group">
+                  <summary className="list-none cursor-pointer">
+                    <h3 className="text-xl font-bold mb-2">Cloudworker</h3>
+                    <p className="text-neutral-500 italic ">
+                      Cloudfactory, Nepal
+                    </p>
+                    <div className="text-neutral-500 select-none ">
+                      <IconChevronRight className="transition-transform duration-300 group-open:rotate-90">
+                      </IconChevronRight>
+                    </div>
+                  </summary>
+                  <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
+                    <li>
+                      Annotated and tagged images to train computer vision models.
+                    </li>
+                    <li>Carried out quality assurance tasks.</li>
+                  </ul>
+                </details>
               </div>
             </div>
 
@@ -144,22 +170,33 @@ export default function ExperienceTimeline() {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-xl font-bold mb-2">
-                  Jr. Marketing Officer
-                </h3>
-                <p className="text-neutral-500 italic mb-4">
-                  Guru Saving & Credit Co-operative, Nepal
-                </p>
-                <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
-                  <li>
-                    Communicated company mission and values; supported customer
-                    acquisition.
-                  </li>
-                  <li>
-                    Managed loan repayment follow-ups and designed printable
-                    forms and ID cards using Adobe tools.
-                  </li>
-                </ul>
+                <details className="group">
+
+                  <summary className="list-none cursor-pointer">
+
+                    <h3 className="text-xl font-bold mb-2">
+                      Jr. Marketing Officer
+                    </h3>
+                    <p className="text-neutral-500 italic ">
+                      Guru Saving & Credit Co-operative, Nepal
+                    </p>
+                    <div className="text-neutral-500 select-none ">
+                      <IconChevronRight className="transition-transform duration-300 group-open:rotate-90">
+                      </IconChevronRight>
+                    </div>
+                  </summary>
+
+                  <ul className="list-disc pl-5 text-neutral-600 leading-relaxed space-y-2">
+                    <li>
+                      Communicated company mission and values; supported customer
+                      acquisition.
+                    </li>
+                    <li>
+                      Managed loan repayment follow-ups and designed printable
+                      forms and ID cards using Adobe tools.
+                    </li>
+                  </ul>
+                </details>
               </div>
             </div>
 

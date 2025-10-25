@@ -40,7 +40,16 @@ const AppLayout = (props: AppLayoutPropsType) => {
           },
         }}
       >
-        <div className="justify-self-end ">
+        <div className="fixed top-0  justify-self-end" style={{
+          zIndex: 300,
+          color: "var(--mantine-color-text)",
+          fontWeight: "bold",
+          fontSize: "14px",
+          backgroundColor: "color-mix(in srgb, var(--mantine-color-body) 80%, transparent)",
+          padding: "10px 20px",
+          borderBottomRightRadius: "8px",
+          borderBottomLeftRadius: "8px",
+        }}>
           <div className="flex gap-5 items-center">
             <Link href="/" scroll={true}>
               Home

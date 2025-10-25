@@ -32,7 +32,7 @@ const Hero = () => {
               fontSize: "2.5rem",
               fontWeight: "bold",
               color: "white",
-              textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black"
+              textShadow: "2px 2px 0 black, -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black",
             }}
           >PRATIK DHAKAL</Text>
           <Stack gap={10}>
