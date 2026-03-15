@@ -1,7 +1,7 @@
-'use client';
-import { Card, Text, Group, Box } from '@mantine/core';
-import React from 'react';
-import { NewsItemType } from './types';
+"use client";
+import { Card, Text, Group, Box } from "@mantine/core";
+import React from "react";
+import { NewsItemType } from "./types";
 
 interface NewsCardProps {
   newsItem: NewsItemType;
@@ -9,10 +9,12 @@ interface NewsCardProps {
 
 const NewsCard = ({ newsItem }: NewsCardProps) => {
   const date = new Date(newsItem.created_at);
-  const formattedDate = date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+  const formattedDate = date.toLocaleString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
   });
   return (
     <Card
@@ -23,12 +25,12 @@ const NewsCard = ({ newsItem }: NewsCardProps) => {
       target="_blank"
       withBorder
     >
-      <Group justify='space-between' align="center">
+      <Group justify="space-between" align="center">
         <Box>
           <Text fw={300} size="lg">
             {newsItem.title}
           </Text>
-          <Text fw={200} c={'dimmed'} size='sm' >
+          <Text fw={200} c={"dimmed"} size="sm">
             {formattedDate}
           </Text>
         </Box>
