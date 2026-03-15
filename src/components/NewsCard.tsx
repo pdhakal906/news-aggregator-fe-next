@@ -9,13 +9,15 @@ interface NewsCardProps {
 
 const NewsCard = ({ newsItem }: NewsCardProps) => {
   const date = new Date(newsItem.created_at);
-  const formattedDate = date.toLocaleString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const formattedDate = date
+    .toLocaleString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    })
+    .replace(" at ", " ");
   return (
     <Card
       shadow="sm"
